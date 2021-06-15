@@ -30,7 +30,7 @@ int main(){
                steps = 0;
                last = 0;
                //正要往右
-               car.turn(100,-0.5);
+               car.turn(50,-0.8);
                while(steps*6.5*3.14/32 < 5) {
                      ThisThread::sleep_for(100ms);
                }
@@ -41,7 +41,7 @@ int main(){
                car.stop();
                steps = 0;
                last = 0;
-               car.turn(100,0.5);
+               car.turn(50,0.8);
                while(steps*6.5*3.14/32 < 5) {
                      ThisThread::sleep_for(100ms);
                }

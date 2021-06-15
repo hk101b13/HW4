@@ -2,7 +2,7 @@ import serial
 import time
 
 # XBee setting
-serdev = '/dev/ttyUSB0'
+serdev = '/dev/ttyUSB1'
 s = serial.Serial(serdev, 9600)
 
 s.write("+++".encode())
@@ -50,27 +50,27 @@ while True:
     # send RPC to remote
 
     s.write("/Cargo/run 20 20 \n\r".encode())
-    time.sleep(1)
+    time.sleep(5)
 
-    s.write("/myled2/write 1\r".encode())
+    s.write("/myled2/write 1 \n\r".encode())
     time.sleep(1)
 
     s.write("/Cargo/run -20 20 \n\r".encode())
     time.sleep(5)
 
-    s.write("/myled3/write 1\r".encode())
+    s.write("/myled3/write 1 \n\r".encode())
     time.sleep(1)
 
     s.write("/Cargo/run -20 -20 \n\r".encode())
     time.sleep(5)
 
-    s.write("/myled3/write 0\r".encode())
+    s.write("/myled3/write 0 \n\r".encode())
     time.sleep(1)
 
     s.write("/Cargo/run 20 -20 \n\r".encode())
     time.sleep(5)
 
-    s.write("/myled2/write 0\r".encode())
+    s.write("/myled2/write 0 \r".encode())
     time.sleep(1)
 
 

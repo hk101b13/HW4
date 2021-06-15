@@ -18,11 +18,11 @@ while(True):
    clock.tick()
    img = sensor.snapshot().binary([THRESHOLD]) if BINARY_VISIBLE else sensor.snapshot()
    #if enable_lens_corr: img.lens_corr(1.8) # for 2.8mm lens...
-   line = img.get_regression([(255,255) if BINARY_VISIBLE else THRESHOLD],roi = (20,0,140,70), robust = True)
+   line = img.get_regression([(255,255) if BINARY_VISIBLE else THRESHOLD],roi = (20,0,120,30), robust = True)
    if (line): img.draw_line(line.line(),color =127)
 
 
-   #print(line.rho())
+   print(line.rho())
    if(line.rho()<0):
      dir = "l"
    elif(line.rho()>0):
@@ -31,3 +31,4 @@ while(True):
    print(dir)
 
    uart.write(("%s" % print_arg).encode())
+
