@@ -9,7 +9,7 @@ I use the tag.y_rotation() to check if the car is facing directly and perpendicu
 
 # final project
 ## (1) how to setup and run your program?
-Please set a runway with 3 cm width black line, and paste an apriltag at the end of the runway on the ground. Put the bbcar at the starting place. Make sure that the camera is facing directly to the black line, and the xbee is connecting to the PC.
+Please set a runway with 3 cm width black line, and paste an apriltag at the end of the runway on the ground. Put the bbcar at the starting place. Make sure that the camera is facing directly to the black line, and the xbee is connecting to the PC. Note that the main.py file is for openmv.
 
 p.s if the car deviates the runway, please replug the openmv power and try again.
 ## (2) what are the results
